@@ -1,0 +1,27 @@
+<nav class="primary-menu">
+
+	<div class="menu-collapser">
+		<span class="collapse-text">Menu</span>
+		<div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div>
+	</div>
+	
+	<ul class="primary-menu-group">
+		[*>NODE-TOP]
+	</ul>
+</nav>
+	
+[>NODE-TOP]
+		[?ENABLED]
+		<li class="primary-menu-item[?FIRST] first[/?][?LAST] last[/?][?SELECTED] selected[/?][?NODE] has-child[/?]">
+			<a href="[=URL]" class="primary-menu-link">[=TEXT]</a>
+		[?ELSE]
+			<a href="[=URL]" class="primary-menu-link">[=TEXT]</a>
+		[/?]
+		[?NODE] 
+			<ul class="primary-menu-child">           
+				<li>
+					[*>NODE]
+				</li> 
+			</ul>         
+		[/?]
+[/>]
