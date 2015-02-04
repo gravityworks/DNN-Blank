@@ -19,31 +19,27 @@
 <![endif]-->
 
 
-<header class="container header">
-  <div>
-    <h1 class="primary-title"><a href="/" id="primary-logo">Michigan Realtors</a></h1>
-    <h2 class="secondary-title-admin"><%=PortalSettings.ActiveTab.TabName %></h2>
-    <dnn:MENU MenuStyle="primary" runat="server"></dnn:MENU>
-    <p> 
-      <a href="<%=PortalSettings.ActiveTab.BreadCrumbs(0).FullUrl%>" class="breadcrumb">
-          Back to <%=PortalSettings.ActiveTab.BreadCrumbs(0).TabName%>
-      </a>
-    </p>
-  </div>
+<header role="banner">
+  <a href="/" class="logo">YOURSITE home</a>
+  <h2><%=PortalSettings.ActiveTab.TabName %></h2>
+  <dnn:MENU MenuStyle="primary" runat="server"></dnn:MENU>
+    <a href="<%=PortalSettings.ActiveTab.BreadCrumbs(0).FullUrl%>" class="breadcrumb">
+        Back to <%=PortalSettings.ActiveTab.BreadCrumbs(0).TabName%>
+    </a>
 </header>
 
-<section class="main-section">
-  <div class="container">
-    <div id="ContentPane" class="content-main" runat="server"></div>
-  </div>
-</section>
+<main class="main-section">
+  <div id="ContentPane" class="content-main" runat="server"></div>
+  <div id="LeftPane" runat="server"></div>
+  <div id="RightPane" runat="server"></div>
+</main>
 
-<section class="feature-section">
-  <div class="container">
-    <div id="LeftPane" class="content-third" runat="server"></div>
-    <div id="CenterPane" class="content-third" runat="server"></div>
-    <div id="RightPane" class="content-third" runat="server"></div>
-  </div>
-</section>
+<aside role="complimentary">
+  <div id="SidebarPane" runat="server"></div>
+</aside>
+
+<footer role="contentinfo">
+  <div id="FooterPane" runat="server"></div>
+</footer>
 
 <script src="/Portals/_default/skins/ -- YOURSITE -- /js/script.js"></script>
