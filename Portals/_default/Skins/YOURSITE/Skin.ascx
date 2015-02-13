@@ -12,12 +12,13 @@
 <%@ Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <meta name="viewport" content="width=device-width" />
 
-<!--[If lt IE 9]>
-    <script src="/Portals/_default/Skins/ -- YOURSITE -- /js/html5shiv.js"></script>
-    <script src="/Portals/_default/Skins/ -- YOURSITE -- /js/html5shiv-printshiv.js"></script>
-    <script src="/Portals/_default/Skins/ -- YOURSITE -- /js/respond.min.js"></script>
+<!--[If lte IE 8]>
+    <script src="<%=SkinPath%>js/html5shiv.js"></script>
+    <script src="<%=SkinPath%>js/html5shiv-printshiv.js"></script>
+    <script src="<%=SkinPath%>js/respond.min.js"></script>
 <![endif]-->
 
+<a href="#main-content" class="visually-hidden">Skip navigation</a>
 
 <header role="banner">
   <a href="/" class="logo">YOURSITE home</a>
@@ -28,7 +29,7 @@
     </a>
 </header>
 
-<main class="main-section">
+<main id="main-content" class="main-section">
   <div id="ContentPane" class="content-main" runat="server"></div>
   <div id="LeftPane" runat="server"></div>
   <div id="RightPane" runat="server"></div>
@@ -42,4 +43,4 @@
   <div id="FooterPane" runat="server"></div>
 </footer>
 
-<script src="/Portals/_default/skins/ -- YOURSITE -- /js/script.js"></script>
+<script src="<%=SkinPath%>js/script.js"></script>
