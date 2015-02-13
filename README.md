@@ -1,4 +1,4 @@
 DNN-Blank
 =========
 
-Blank DNN base - no styles, sass, grunt etc.
+Blank DNN base - add your own styles

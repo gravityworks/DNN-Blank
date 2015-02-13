@@ -1,27 +1,26 @@
-<nav class="primary-menu">
+<nav>
 
 	<div class="menu-collapser">
 		<span class="collapse-text">Menu</span>
 		<div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div>
 	</div>
 	
-	<ul class="primary-menu-group">
+	<ul class="primary-menu">
 		[*>NODE-TOP]
 	</ul>
 </nav>
 	
 [>NODE-TOP]
+		<li class="[?FIRST] first[/?][?LAST] last[/?][?SELECTED] selected[/?][?NODE] has-child[/?]">
 		[?ENABLED]
-		<li class="primary-menu-item[?FIRST] first[/?][?LAST] last[/?][?SELECTED] selected[/?][?NODE] has-child[/?]">
-			<a href="[=URL]" class="primary-menu-link">[=TEXT]</a>
+			<a href="[=URL]">[=TEXT]</a>
 		[?ELSE]
-			<a href="[=URL]" class="primary-menu-link">[=TEXT]</a>
+			[=TEXT]
 		[/?]
 		[?NODE] 
-			<ul class="primary-menu-child">           
-				<li>
+			<ul>           
 					[*>NODE]
-				</li> 
 			</ul>         
 		[/?]
+		</li>
 [/>]
