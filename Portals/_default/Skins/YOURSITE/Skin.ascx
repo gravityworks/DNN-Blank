@@ -20,14 +20,7 @@
 
 <a href="#main-content" class="visually-hidden">Skip navigation</a>
 
-<header role="banner">
-  <a href="/" class="logo">YOURSITE home</a>
-  <h2><%=PortalSettings.ActiveTab.TabName %></h2>
-  <dnn:MENU MenuStyle="primary" runat="server"></dnn:MENU>
-    <a href="<%=PortalSettings.ActiveTab.BreadCrumbs(0).FullUrl%>" class="breadcrumb">
-        Back to <%=PortalSettings.ActiveTab.BreadCrumbs(0).TabName%>
-    </a>
-</header>
+<!--#include file="header.ascx" -->
 
 <main id="main-content" class="main-section">
   <div id="ContentPane" class="content-main" runat="server"></div>
@@ -39,8 +32,6 @@
   <div id="SidebarPane" runat="server"></div>
 </aside>
 
-<footer role="contentinfo">
-  <div id="FooterPane" runat="server"></div>
-</footer>
+<!--#include file="footer.ascx" -->
 
 <script src="<%=SkinPath%>js/script.js"></script>
